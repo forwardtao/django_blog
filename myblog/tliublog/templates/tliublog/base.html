@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+{% load static category  %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'users/bulma.css' %}">
+    <title>{% block title %}时光的小河流{% endblock  %}</title>
+</head>
+<body>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://bulma.io">
+        <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+      </a>
+  
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+  
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+        {% block navbar-start %}
+        <a class="navbar-item" href="/">
+          首页
+        </a>
+        {% get_category_list as category_list %}
+        {% for category in category_list %}
+        <a class="navbar-item" href="{% url 'tliublog:category_list' category.id %}">
+          {{ category.name }}
+        </a>
+        {% endfor %}
+  
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            More
+          </a>
+  
+          <div class="navbar-dropdown">
+            <a class="navbar-item">
+              About
+            </a>
+            <a class="navbar-item">
+              Jobs
+            </a>
+            <a class="navbar-item">
+              Contact
+            </a>
+            <hr class="navbar-divider">
+            <a class="navbar-item">
+              Report an issue
+            </a>
+          </div>
+        </div>
+        {% endblock  %}
+      </div>
+  
+      <div class="navbar-end">
+        {% block navbar-end %}
+        <div class="navbar-item">
+          {% if user.is_authenticated %}
+          <div class="buttons">
+              <a href="{% url 'users:user_profile' %}" class="button is-is-outlined is-light">{{ request.user.username }}</a>
+              <a href="{% url 'users:logout' %}" class="button is-primary is-light">退出</a>
+          </div>
+          {% else %}
+          <div class="buttons">
+            <a class="button is-primary" href="{% url 'users:register' %}" target="_blank">
+              <strong>注册</strong>
+            </a>
+            <a class="button is-light" href="{% url 'users:login' %}" target="_blank">
+              登录
+            </a>
+          </div>
+          {% endif %}
+        </div>
+        {% endblock  %}
+      </div>
+    </div>
+  </nav>
+  <section class="container">
+    <div class="container">
+      <div class="columns">
+        <div class="column is-8">
+          {% block section %}
+          {% block archives %}{% endblock  %}
+          {% if page_obj %}
+					  {% for article in page_obj %}
+          
+            <div class="box">
+              <h1 class= "is-size-5">
+                <a href="{% url 'tliublog:article_detail' article.id %}">{{article.title}}</a>
+              </h1>
+              <div class="is-size-7 has-text-has-text-grey-light pt-1 pb-1">
+                <span class="mr-3">作者：{{article.author}}</span><span>发布日期：{{article.add_date}}</span>
+              </div>
+              <p>{{ article.desc|truncatechars:50 }}</p>
+            </div>
+            {% endfor %}
+          {% else %}
+          <div class="box">
+            <p class="has-text-danger">没有匹配的文章！</p>
+          </div>
+          {% endif %}
+          {% if page_obj %}
+						<nav class="pagination is-centered" role="navigation" aria-label="pagination">
+						{% if page_obj.has_previous %}
+							<a class="pagination-previous" href="?page={{ page_obj.previous_page_number }}">Previous</a>
+						{% endif %}
+						{% if page_obj.has_next %}
+						<a class="pagination-next" href="?page={{ page_obj.next_page_number }}">Next page</a>
+						{% endif %}
+						<ul class="pagination-list">
+						{% if page_obj.has_previous %}
+							<li><a class="pagination-link" aria-label="Goto page 45" href="?page={{ page_obj.previous_page_number }}">{{ page_obj.previous_page_number }}</a></li>
+						{% endif %}
+							<li><a class="pagination-link is-current" aria-label="Page {{ page_obj.number }}" aria-current="page" href='?page={{ page_obj.number }}'>{{ page_obj.number }}</a></li>
+						{% if page_obj.has_next %}
+							<li><a class="pagination-link" href="?page={{ page_obj.next_page_number }}" aria-label="Goto page {{ page_obj.next_page_number }}">{{ page_obj.next_page_number }}</a></li>
+						{% endif %}
+						</ul>
+						</nav>
+						{% endif %} 
+          {% endblock  %}
+        </div>
+        <div class="column is-4">
+          {% block right %}
+          {% get_sidebar_list as sidebar_list %}
+          {% for sidebar in sidebar_list %}
+          <div class="box">
+            <h1 class="is-size-5 title">{{ sidebar.title }}</h1>
+            <p>{{sidebar.get_content|safe}}</p>
+          </div>
+          {% endfor %}
+          {% endblock  %}
+        </div>
+      </div>
+    </div>
+  </section>
+  {% block footer %}
+    <footer class="footer container mt-6">
+      <div class="container has-text-centered">
+        博客底部
+      </div>
+    </footer>
+  {% endblock  %}
+</body>
+</html>

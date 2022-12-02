@@ -1,0 +1,33 @@
+{% extends 'tliublog/base.html' %}
+{% block section %}
+<div class="box">
+    <h1 class="title is-size-5 has-text-weight-bold">
+        <a>{{ article.title }}</a>
+    </h1>
+    <div class = "is-size-7 has-text-grey-light pt-1 pb-1">
+        <span class="mr-3">作者：{{ article.author }}</span><span>发布日期：{{ article.add_date}}</span><span>浏览量：{{article.pageview}}</span>
+    </div>
+    <div class="content">
+        {{article.content|safe}}
+    </div>
+</div>
+
+<div class="box">
+<div class="level">
+    <div class="level-left">
+        {% if prev_article %}
+        <span>上一页: </span><a href="{% url 'tliublog:article_detail' prev_article.id %}" class="level-item">{{ prev_article.title }}</a>
+        {% else %}
+        <span class="has-text-danger-dark is-size-7">首页</span>
+        {% endif %}
+    </div>
+    <div class="level-right">
+        {% if next_article %}
+        <span>下一页: </span><a href="{% url 'tliublog:article_detail' next_article.id %}" class="level-item">{{ next_article.title }}</a>
+        {% else %}
+        <span class="has-text-danger-dark is-size-7">尾页</span>
+        {% endif %}
+    </div>
+</div>
+</div>
+{% endblock %}

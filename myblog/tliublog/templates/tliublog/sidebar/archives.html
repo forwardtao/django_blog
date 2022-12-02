@@ -1,0 +1,8 @@
+{% load category %}
+{% get_archives as archives_list%}
+{% for archives in archives_list %}
+<ul>
+    <li><a href="{% url 'tliublog:archives' archives.year archives.month %}">{{ archives }}</a></li>
+</ul>
+    
+{% endfor %}

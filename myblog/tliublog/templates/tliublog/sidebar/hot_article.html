@@ -1,0 +1,7 @@
+{% load category %}
+{% get_hot_pageview_article as article_list%}
+{% for article in article_list %}
+    <ul>
+        <li><a href="{% url 'tliublog:article_detail' article.id %}">{{ article.title}}</a></li>
+    </ul>
+{% endfor %}
