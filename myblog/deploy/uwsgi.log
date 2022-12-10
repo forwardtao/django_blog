@@ -1,0 +1,207 @@
+*** Starting uWSGI 2.0.21 (64bit) on [Tue Dec  6 19:54:42 2022] ***
+compiled with version: 9.4.0 on 06 December 2022 07:25:48
+os: Linux-5.15.0-56-generic #62~20.04.1-Ubuntu SMP Tue Nov 22 21:24:20 UTC 2022
+nodename: tliu
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /var/www/django_blog/myblog
+detected binary path: /var/www/django_blog/myblog/blogvenv/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /var/www/django_blog/myblog
+your processes number limit is 15258
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:8001 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.9.1 (default, Dec  5 2022, 19:31:56)  [GCC 9.4.0]
+PEP 405 virtualenv detected: /var/www/django_blog/myblog/blogvenv
+Set PythonHome to /var/www/django_blog/myblog/blogvenv
+Python main interpreter initialized at 0x55fa84960d30
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 917136 bytes (895 KB) for 20 cores
+*** Operational MODE: preforking+threaded ***
+ModuleNotFoundError: No module named 'tliublog.wsgi'
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 39031)
+spawned uWSGI worker 1 (pid: 39032, cores: 2)
+spawned uWSGI worker 2 (pid: 39033, cores: 2)
+spawned uWSGI worker 3 (pid: 39034, cores: 2)
+spawned uWSGI worker 4 (pid: 39035, cores: 2)
+spawned uWSGI worker 5 (pid: 39036, cores: 2)
+spawned uWSGI worker 6 (pid: 39037, cores: 2)
+spawned uWSGI worker 7 (pid: 39038, cores: 2)
+spawned uWSGI worker 8 (pid: 39039, cores: 2)
+spawned uWSGI worker 9 (pid: 39040, cores: 2)
+spawned uWSGI worker 10 (pid: 39041, cores: 2)
+*** Starting uWSGI 2.0.21 (64bit) on [Tue Dec  6 19:57:54 2022] ***
+compiled with version: 9.4.0 on 06 December 2022 07:25:48
+os: Linux-5.15.0-56-generic #62~20.04.1-Ubuntu SMP Tue Nov 22 21:24:20 UTC 2022
+nodename: tliu
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /var/www/django_blog/myblog
+detected binary path: /var/www/django_blog/myblog/blogvenv/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /var/www/django_blog/myblog
+your processes number limit is 15258
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 192.168.124.29:8001 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.9.1 (default, Dec  5 2022, 19:31:56)  [GCC 9.4.0]
+PEP 405 virtualenv detected: /var/www/django_blog/myblog/blogvenv
+Set PythonHome to /var/www/django_blog/myblog/blogvenv
+Python main interpreter initialized at 0x55f263c22d50
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 917136 bytes (895 KB) for 20 cores
+*** Operational MODE: preforking+threaded ***
+ModuleNotFoundError: No module named 'tliublog.wsgi'
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 39075)
+spawned uWSGI worker 1 (pid: 39076, cores: 2)
+spawned uWSGI worker 2 (pid: 39077, cores: 2)
+spawned uWSGI worker 3 (pid: 39078, cores: 2)
+spawned uWSGI worker 4 (pid: 39079, cores: 2)
+spawned uWSGI worker 5 (pid: 39080, cores: 2)
+spawned uWSGI worker 6 (pid: 39081, cores: 2)
+spawned uWSGI worker 7 (pid: 39082, cores: 2)
+spawned uWSGI worker 8 (pid: 39083, cores: 2)
+spawned uWSGI worker 9 (pid: 39084, cores: 2)
+spawned uWSGI worker 10 (pid: 39085, cores: 2)
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+*** Starting uWSGI 2.0.21 (64bit) on [Tue Dec  6 19:59:33 2022] ***
+compiled with version: 9.4.0 on 06 December 2022 07:25:48
+os: Linux-5.15.0-56-generic #62~20.04.1-Ubuntu SMP Tue Nov 22 21:24:20 UTC 2022
+nodename: tliu
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /var/www/django_blog/myblog
+detected binary path: /var/www/django_blog/myblog/blogvenv/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /var/www/django_blog/myblog
+your processes number limit is 15258
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (127.0.0.1:8001).
+bind(): Address already in use [core/socket.c line 769]
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+*** Starting uWSGI 2.0.21 (64bit) on [Tue Dec  6 20:05:26 2022] ***
+compiled with version: 9.4.0 on 06 December 2022 07:25:48
+os: Linux-5.15.0-56-generic #62~20.04.1-Ubuntu SMP Tue Nov 22 21:24:20 UTC 2022
+nodename: tliu
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /var/www/django_blog/myblog
+detected binary path: /var/www/django_blog/myblog/blogvenv/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /var/www/django_blog/myblog
+your processes number limit is 15258
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:8001 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.9.1 (default, Dec  5 2022, 19:31:56)  [GCC 9.4.0]
+PEP 405 virtualenv detected: /var/www/django_blog/myblog/blogvenv
+Set PythonHome to /var/www/django_blog/myblog/blogvenv
+Python main interpreter initialized at 0x55ea48597d30
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 917136 bytes (895 KB) for 20 cores
+*** Operational MODE: preforking+threaded ***
+ModuleNotFoundError: No module named 'tliublog.wsgi'
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 39135)
+spawned uWSGI worker 1 (pid: 39136, cores: 2)
+spawned uWSGI worker 2 (pid: 39137, cores: 2)
+spawned uWSGI worker 3 (pid: 39138, cores: 2)
+spawned uWSGI worker 4 (pid: 39139, cores: 2)
+spawned uWSGI worker 5 (pid: 39140, cores: 2)
+spawned uWSGI worker 6 (pid: 39141, cores: 2)
+spawned uWSGI worker 7 (pid: 39142, cores: 2)
+spawned uWSGI worker 8 (pid: 39143, cores: 2)
+spawned uWSGI worker 9 (pid: 39146, cores: 2)
+spawned uWSGI worker 10 (pid: 39147, cores: 2)
+Tue Dec  6 20:16:15 2022 - uWSGI worker 8 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Dec  6 20:16:15 2022 - uWSGI worker 5 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Dec  6 20:16:15 2022 - uWSGI worker 9 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Dec  6 20:16:15 2022 - uWSGI worker 7 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Dec  6 20:16:15 2022 - uWSGI worker 2 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Dec  6 20:16:15 2022 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Dec  6 20:16:15 2022 - uWSGI worker 10 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Dec  6 20:16:15 2022 - uWSGI worker 6 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Dec  6 20:16:15 2022 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Dec  6 20:16:15 2022 - uWSGI worker 10 screams: UAAAAAAH my master disconnected: i will kill myself !!!
